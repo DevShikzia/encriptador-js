@@ -1,0 +1,369 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,100;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    font-family: 'Inter', sans-serif;
+    text-decoration: none;
+}
+
+li{
+    list-style:none
+}
+
+
+/* --------------- HEADER --------------- */
+
+
+.header{
+
+/*background: black;*/
+display: flex;
+align-items: center;
+padding: 25px;
+}
+
+.logo{
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    color: #0A3871;
+    text-transform: capitalize;
+    font-size: 20px;
+    /* margin: 20px 0px 20px 15px; */
+    cursor: pointer;
+
+}
+.header .logo_animation{
+    display: block;
+    font-family: monospace;
+    white-space: nowrap;
+    border-right: 4px solid;
+    width: 12ch;
+    animation: typing 2s steps(12), blink 0.9s infinite step-end alternate;
+    overflow:hidden;
+ }
+    
+     @keyFrames typing {
+    
+    from { width: 0}
+    }
+    
+    @keyFrames blink {
+     50% { border-color: transparent}
+    }
+
+
+.fa-power-off{
+    cursor: pointer;
+    font-size: 1.2em;
+    margin: 0 1%;
+}
+
+.on{
+    color: green;
+}
+
+.off{
+   color: red;
+}
+
+
+/* Body */
+
+body{
+  background:#E5E5E5;
+  transition: 0.4s;
+
+}
+
+main{
+   display: flex;
+    flex-wrap: wrap;
+    /* flex-direction: row; */
+    justify-content: center;
+   
+}
+
+.principal_box{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 20px;
+    position: relative;
+}
+
+.alert{
+    color: #434c5e;
+    font-size: 14px;
+}
+.buttom-box{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    margin: 20px 0px; 
+}
+
+/* === TEXTAREA PRINCIPAL === */
+.principal_box .input-text{
+    height: 40vh;
+    width: 90%;
+    border: none;
+    outline: none;
+    color: #0A3871;
+    font-size: 1.5em;
+    resize: none;
+    background:#E5E5E5; 
+}
+.input-text::placeholder{
+    color: #0A3871;
+}
+
+.delete-text{
+  position:absolute;
+    right: 5vh;
+    color: #0A3871;
+    top: -15px;
+    cursor: pointer;
+
+}
+ 
+
+
+/* === BOTONES ENCRIPTAR/DESENCRIPTAR === */
+
+.encriptarBtm{
+    background: #0A3871;
+    border: none;
+    height: 5em;
+    width: 95%;
+    color: white;
+}
+.encriptarBtm:hover{
+
+    background: #072B61;
+
+}
+
+.encriptarBtm:active{
+    background: #0A3871;
+
+}
+
+
+/* Desencriptar*/
+
+.img{
+    display: none;
+}
+
+.desencriptarBtm{
+    background: white;
+    border: 1px solid #0A3871;
+    height: 5em;
+    width: 95%;
+    color: #0A3871;
+}
+
+.desencriptarBtm, .encriptarBtm{
+    border-radius: 24px;
+    cursor: pointer;
+    text-transform: capitalize;
+    margin: 5px 0;
+    transition: all 0.5s;
+}
+
+.desencriptarBtm:active{
+    background: #0A3871;
+    border: 1px solid #0A3871;
+    color: white;
+
+}
+
+
+/* SEGUNDO SECTION  */
+
+.showText{
+
+    width: 90%;
+    height: 20%;
+    position: relative;
+ 
+   
+}
+
+.textResult{
+
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    color: #0A3871;
+    font-size: 1.5em;
+    resize: none;
+    text-align: center;
+    padding: 30px;
+    box-shadow: 0em 8px 20px 5px rgb(0 0 0 / 10%);
+    border-radius: 10px;
+    
+}
+
+.buttom-copy{
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    border: 1px solid #0A3871;
+    border-radius: 5px;
+    padding: 5px;
+    background: white;
+    text-transform: capitalize;
+    color: #0A3871;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.buttom-copy:active{
+    background: #0A3871;
+
+    color: white;
+
+
+}
+
+
+
+
+
+/* ==== Footer ==== */
+
+.footer{
+        text-align: center;
+        text-transform: capitalize;
+        font-weight: bold;
+        font-style: italic;
+        color: #072B61;
+}
+
+.footer nav ul{
+    display: flex;
+    justify-content: center;
+    margin: 15px;
+}
+.footer nav ul li{
+   
+    margin-right: 25px;
+}
+.footer nav ul li:last-child{
+   
+    margin-right: 0px;
+}
+
+.footer nav ul li a{
+    color: #072B61;
+    font-size: 2em;
+}
+
+/* MEDIA QUERYS = TABLET */
+
+@media screen and (min-width: 768px) {
+   
+    .buttom-box{
+      
+        flex-direction: row;
+        justify-content: space-around;
+        width: 95%;
+
+    }
+
+    .desencriptarBtm, .encriptarBtm{
+        width: 45%;
+    }
+
+    }
+
+@media screen and (min-width: 1024px) {
+
+    main{
+        flex-wrap: nowrap;
+    }
+
+    .principal_box{
+      width: 60%;
+      flex-wrap: wrap;
+      justify-content: center;
+      flex-direction: row;
+      align-content: space-between;
+    }
+
+    .principal_box .input-text {
+        height: 63vh;
+    }
+   
+    .buttom-box{
+      
+        flex-direction: row;
+        justify-content: space-around;
+        width: 80%;
+        height: 20px;
+
+    }
+
+    .desencriptarBtm, .encriptarBtm{
+        height: 3.5em;
+    }
+    
+    .showText{
+        width: 30%;
+        height: 80vh;
+    }
+
+    .img{
+        display: inherit;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+
+
+
+    }
+
+
+
+body.darkmode{
+ background-color: #2e3440;
+} 
+
+body.darkmode, body.darkmode h1,body.darkmode textarea::placeholder, body.darkmode button,body.darkmode .delete-text, .darkmode .alert, .darkmode .footer,.darkmode .footer nav ul li a{
+    color: #d1b3c4;   
+}
+
+body.darkmode .principal_box textarea, body.darkmode textarea{ 
+
+background: #2e3440;
+color: #CED4DA;
+
+}
+body.darkmode button{ 
+
+background: #434c5e;
+border: none;
+
+}
+
+body.darkmode button:hover{
+  background: #5b5271 ;
+  border: none;
+
+}
+
+body.darkmode button:active{
+ 
+    background: #e8c2ca;
+    color: #2e3440;
+
+}

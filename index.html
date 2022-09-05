@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./public/css/style.css">
+    <title>Encriptador de texto</title>
+</head>
+<body  id="body">
+    <header class="header">
+
+        
+
+
+        <i class="fa-solid fa-power-off on" id="bdark"></i>
+        <h1 class="logo logo_animation" id="logo">encriptador</h1>
+       
+    </header>
+    <main>
+    
+     <section class="principal_box">
+         <textarea spellcheck=false class='input-text' name="input-text" id="input-text" pattern="[A-Za-z0-9_-]{1,15}" placeholder="Ingresa tu texto aqui..."></textarea>
+         <i class="fa-solid fa-xmark delete-text" id="delete-text"></i>
+         <p class="alert"> <i class="fa-solid fa-flag"></i> ingresa un texto sin numeros ni acentos</p>
+         <div class="buttom-box">
+             
+             <button class="encriptarBtm" id="encriptarBtm" >encriptar</button>
+             <button class="desencriptarBtm" id="desencriptarBtm">desencriptar</button>
+        </div>
+     </section>
+    <div class="showText">
+        <img  class="img" id="img" src="/public/dark.svg" alt="">
+        <textarea class="textResult" spellcheck=false name="textResult" id="textResult" placeholder="Ningun mensaje fue encontrado"></textarea>
+        <button class="buttom-copy" id="copyText">copy</button>
+        
+     </div>
+    </main>
+    <footer class="footer">
+        <nav>
+            <ul>
+                <li>
+                    <a href="https://github.com/DevShikzia" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/sanchez-matias/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/__matt.s__/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+                </li>
+            </ul>
+        </nav>
+        <p>	shikzia - 2022</p>
+    </footer>
+    <script src="./public/js/index.js"></script>
+</body>
+</html>
